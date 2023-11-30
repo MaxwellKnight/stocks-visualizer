@@ -24,29 +24,38 @@ Before running the app, ensure you have the following installed:
 
    ```
 
-2. bash
-   Copy code
+2. Change into the project directory:
+
+   ```bash
    cd financial-dashboard-app
    Install dependencies:
 
-3. bash
-   Copy code
+   ```
+
+3. Install dependencies:
+
+   ```bash
    npm install
 
-# or
+   #or
 
-    yarn
-    Running the App
-    Run the app locally with the following command:
+   yarn
+   ```
 
-4.  bash
-    Copy code
-    npm start
+### Running the App
 
-# or
+4. Run the app locally with the following command:
 
-    yarn start
-    Open http://localhost:3000 in your web browser to view the app.
+   ```bash
+   npm start
+
+   #or
+
+   yarn start
+
+   ```
+
+   Open http://localhost:5173 in your web browser to view the app.
 
 ### Features
 
@@ -65,6 +74,5 @@ Enter the desired stock ticker symbol in the input field to fetch data for a spe
 Toggle between quarterly and annual views for the Revenue and Income component.
 
 rust
-Copy code
 
 Copy and paste it as needed!
