@@ -55,6 +55,34 @@ Before running the app, ensure you have the following installed:
 
    Open http://localhost:5173 in your web browser to view the app.
 
+## CORS Issue
+
+When running the app locally, you might face CORS issues, preventing the app from fetching data from certain APIs.
+
+## Solution
+
+To overcome CORS issues during development, you can use a Chrome extension that disables CORS. One such extension is "Allow CORS: Access-Control-Allow-Origin."
+
+### Instructions:
+
+1. Install the "Allow CORS: Access-Control-Allow-Origin" extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf).
+
+2. Enable the extension while running the app locally.
+
+3. Keep in mind that this extension should only be used for development purposes and should not be enabled while browsing other websites.
+
+## Getting Started
+
+1. Clone the repository.
+
+2. Install dependencies using `npm install`.
+
+3. Start the app with `npm start`.
+
+4. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+Enjoy exploring the financial dashboard app!
+
 ![Financial Dashboard](./dashboard_screenshot.png)
 
 Copy and paste it as needed!
