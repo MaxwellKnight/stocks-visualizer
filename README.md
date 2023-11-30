@@ -1,7 +1,4 @@
-markdown
-Copy code
-
-# Financial Dashboard App
+# Stock Visualizer App
 
 This React app provides a financial dashboard that allows users to visualize and analyze financial data for different companies. It includes various components for displaying key financial metrics such as assets and liabilities, debt and cash equivalents, cash flow per share, net debt and free cash flow, returns, revenue and income, margins, cash, acquisitions, and shares outstanding.
 
