@@ -23,7 +23,7 @@ Before running the app, ensure you have the following installed:
 2. Change into the project directory:
 
    ```bash
-   cd financial-dashboard-app
+   cd stocks-visualizer
 
    ```
 
