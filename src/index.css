@@ -24,10 +24,29 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
+.custom-tooltip {
+	background-color: var(--dark-bg);
+	padding: .5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-weight: bold;
+	border-radius: 1rem;
+
+	& .label {
+		color: var(--soft-color);
+	}
+
+	& .desc {
+		font-size: 1.2rem;
+		color: white;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	}
+}
 
