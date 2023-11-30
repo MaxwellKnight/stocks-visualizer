@@ -42,7 +42,7 @@ Before running the app, ensure you have the following installed:
 4. Run the app locally with the following command:
 
    ```bash
-   npm start
+   npm run dev
 
    #or
 
@@ -67,16 +67,6 @@ To overcome CORS issues during development, you can use a Chrome extension that 
 2. Enable the extension while running the app locally.
 
 3. Keep in mind that this extension should only be used for development purposes and should not be enabled while browsing other websites.
-
-## Getting Started
-
-1. Clone the repository.
-
-2. Install dependencies using `npm install`.
-
-3. Start the app with `npm run dev`.
-
-4. Open your browser and navigate to [http://localhost:5173](http://localhost:3000).
 
 ![Financial Dashboard](./dashboard_screenshot.png)
 
