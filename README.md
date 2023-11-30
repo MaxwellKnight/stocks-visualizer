@@ -77,11 +77,9 @@ To overcome CORS issues during development, you can use a Chrome extension that 
 
 2. Install dependencies using `npm install`.
 
-3. Start the app with `npm start`.
+3. Start the app with `npm run dev`.
 
-4. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
-
-Enjoy exploring the financial dashboard app!
+4. Open your browser and navigate to [http://localhost:5173](http://localhost:3000).
 
 ![Financial Dashboard](./dashboard_screenshot.png)
 
