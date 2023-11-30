@@ -1,30 +1,70 @@
-# React + TypeScript + Vite
+markdown
+Copy code
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Financial Dashboard App
 
-Currently, two official plugins are available:
+This React app provides a financial dashboard that allows users to visualize and analyze financial data for different companies. It includes various components for displaying key financial metrics such as assets and liabilities, debt and cash equivalents, cash flow per share, net debt and free cash flow, returns, revenue and income, margins, cash, acquisitions, and shares outstanding.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before running the app, ensure you have the following installed:
 
-- Configure the top-level `parserOptions` property like this:
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/financial-dashboard-app.git
+   Change into the project directory:
+
+   ```
+
+2. bash
+   Copy code
+   cd financial-dashboard-app
+   Install dependencies:
+
+3. bash
+   Copy code
+   npm install
+
+# or
+
+    yarn
+    Running the App
+    Run the app locally with the following command:
+
+4.  bash
+    Copy code
+    npm start
+
+# or
+
+    yarn start
+    Open http://localhost:3000 in your web browser to view the app.
+
+### Features
+
+Assets and Liabilities: Visualizes assets and liabilities data using Recharts.
+Debt and Cash Equivalents: Displays a graph of total debt and cash equivalents.
+Cash Flow per Share: Charts the cash flow per share based on provided ratios.
+Net Debt and Free Cash Flow: Shows the net debt and free cash flow data.
+Returns: Visualizes various returns metrics.
+Revenue and Income: Graphs revenue and operating income over time.
+Margins: Displays different margin ratios.
+Cash: Provides a view of cash flow data.
+Acquisitions: Charts acquisitions data.
+Shares Outstanding: Displays shares outstanding information.
+Usage
+Enter the desired stock ticker symbol in the input field to fetch data for a specific company.
+Toggle between quarterly and annual views for the Revenue and Income component.
+
+rust
+Copy code
+
+Copy and paste it as needed!
