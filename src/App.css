@@ -23,3 +23,59 @@ main {
 	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.ticker-input {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+ }
+ 
+ .ticker-input label {
+	font-size: 1rem;
+	font-weight: bold;
+ }
+ 
+ .ticker-input input {
+	width: 50%;
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1rem;
+	text-align: center;
+	margin-bottom: 2rem;
+ }
+
+
+.custom-tooltip {
+	background-color: #1d1d1dbb;
+	padding: .5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-weight: bold;
+	border-radius: 1rem;
+	white-space: nowrap;
+	overflow: hidden;
+
+	& > p {
+		width: 100%;
+		display: flex;
+		text-align: left;
+		font-size: 1.2rem;
+		gap: 1rem;
+		justify-content: space-between;
+		align-items: center;
+
+		> span {
+			flex: 1;
+
+			&:nth-child(2) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+ 

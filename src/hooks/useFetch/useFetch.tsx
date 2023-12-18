@@ -3,7 +3,7 @@ import fetchReducer, { initial_fetch } from "./reducer";
 
 type Cache<T> = { [url: string]: T };
 
-const useFetch = <T,>(url: string, deps: unknown[] = []) => {
+const useFetch = <T,>(url: string, deps: unknown[] = [], options?: RequestInit) => {
 	const [{ data, loading, error}, dispatch] = useReducer(fetchReducer<T>, initial_fetch);
 	const cache = useRef<Cache<T>>({});
 	const cancelRequest = useRef<boolean>(false);
@@ -17,7 +17,7 @@ const useFetch = <T,>(url: string, deps: unknown[] = []) => {
 				return;
 			}
 			try{
-				const response = await fetch(url);
+				const response = await fetch(url, options);
 				if(!response.ok) throw new Error(response.statusText);
 				const responseData = (await response.json()) as T;
 				cache.current[url] = responseData;

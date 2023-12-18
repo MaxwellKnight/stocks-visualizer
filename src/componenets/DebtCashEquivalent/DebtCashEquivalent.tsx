@@ -1,5 +1,6 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from 'recharts';
 import { RechartsDebtCash } from '../../types/Recharts.type';
+import { CustomTooltip } from '../../utils/recharts';
 
 type TotalDebtAndCashGraphProps = {
 	data: RechartsDebtCash[] | undefined
@@ -18,7 +19,7 @@ const TotalDebtAndCashGraph = ({ data }: TotalDebtAndCashGraphProps) => {
 		>
 			{/* <CartesianGrid strokeDasharray="0"/> */}
 			<XAxis dataKey="year" />
-			<Tooltip />
+			<Tooltip  content={<CustomTooltip />}/>
 			<Legend />
 			<Area dataKey="cashAndCashEquivalents" fill="#8884d8" name="Cash and Equivalents" strokeWidth={3} dot={true} stroke='#8884d8'/>
 			<Area dataKey="totalDebt" fill="#ffc658" name="Total Debt" strokeWidth={3} dot={true} stroke='#ffc658'/>

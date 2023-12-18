@@ -1,5 +1,6 @@
 import { ComposedChart, XAxis, Tooltip, Legend, Bar, ResponsiveContainer, Area } from "recharts"
 import { RechartsAssetsLiabilities } from "../../types/Recharts.type"
+import { CustomTooltip } from "../../utils/recharts"
 
 type AssetsLiabilitiesProps = {
 	rechartsData: RechartsAssetsLiabilities[]
@@ -18,7 +19,7 @@ const AssetsLiabilities = ({ rechartsData }: AssetsLiabilitiesProps) => {
 				{/* <CartesianGrid strokeDasharray="0"/> */}
 				<XAxis dataKey="year" />
 				<Legend />
-				<Tooltip />
+				<Tooltip content={<CustomTooltip />}/>
 				<Bar dataKey="totalLiabilities" fill="#ffc658" name="Total Liabilities"/>
 				<Bar dataKey="totalAssets" fill="#82ca9d" name="Total Assets"/>
 				<Area type="monotone" dataKey="equity" fill="#8884d8" name="Equity" strokeWidth={5} dot={true}/>

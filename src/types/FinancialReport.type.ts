@@ -16,6 +16,12 @@ export interface Income {
 	report: IncomeReport[];
 }
 
+export interface Ratios {
+	originalCurrency: string;
+	convertedCurrency: string;
+	report: RatiosReport[];
+}
+
 export interface BalanceSheetReport {
 	date: string;
 	symbol: string;
@@ -121,7 +127,7 @@ export interface CashFlowReport {
 	calculatedOtherWorkingCapital: number;
 }
 
-export interface Ratios {
+export interface RatiosReport {
 	symbol: string;
 	date: string;
 	calendarYear: string;

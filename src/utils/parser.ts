@@ -55,10 +55,9 @@ export const parseTotalDebtAndCash = (financialReport: BalanceSheet | null | und
   }));
 };
 
-export const parseFreeCashFlowPerShare = (ratios: Ratios[] | null | undefined): RechartsFreeCashFlowPerShare[] => {
+export const parseFreeCashFlowPerShare = (ratios: Ratios | null | undefined): RechartsFreeCashFlowPerShare[] => {
 	if (!ratios) return [];
- 
-	const sortedData = ratios.map((ratio) => ({
+	const sortedData = ratios.report.map((ratio) => ({
 		 year: ratio.calendarYear,
 		 freeCashFlowPerShare: ratio.freeCashFlowPerShare || 0,
 	}))
@@ -135,12 +134,12 @@ export const parseIncomeDataForGraph = (incomeData: Income | null | undefined) =
 	}));
 };
 
-export const parseRatiosDataForGraph = (ratiosData: Ratios[] | null | undefined) => {
+export const parseRatiosDataForGraph = (ratiosData: Ratios | null | undefined) => {
 	if (!ratiosData) {
 	  return [];
 	}
  
-	const sortedData = ratiosData
+	const sortedData = ratiosData.report
 	  .map((ratio) => ({
 		 year: ratio.calendarYear,
 		 returnOnAssets: ratio.returnOnAssets || 0,
@@ -152,9 +151,9 @@ export const parseRatiosDataForGraph = (ratiosData: Ratios[] | null | undefined)
 	return sortedData;
  };
 
- export const parseMargins = (ratios: Ratios[] | null | undefined) => {
+ export const parseMargins = (ratios: Ratios | null | undefined) => {
 	if(!ratios) return [];
-	return ratios.map((ratio) => ({
+	return ratios.report.map((ratio) => ({
 		year: ratio.calendarYear,
 		grossProfitMargin: ratio.grossProfitMargin || 0,
 		operatingProfitMargin: ratio.operatingProfitMargin || 0,
@@ -182,8 +181,8 @@ export const parseSharesOutstanding = (incomeData: Income) => incomeData.report.
 	sharesOutstanding: report.weightedAverageShsOutDil || 0,
  }));
 
-export const parseRatiosForChart = (ratiosData: Ratios[]) => {
-	return ratiosData.map((data) => ({
+export const parseRatiosForChart = (ratiosData: Ratios) => {
+	return ratiosData.report.map((data) => ({
 	  date: data.date,
 	  currentRatio: data.currentRatio,
 	  quickRatio: data.quickRatio,

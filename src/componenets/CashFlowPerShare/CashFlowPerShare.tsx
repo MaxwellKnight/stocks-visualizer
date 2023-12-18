@@ -1,5 +1,6 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from "recharts"
 import { RechartsFreeCashFlowPerShare } from "../../types/Recharts.type"
+import { CustomTooltip } from "../../utils/recharts"
 
 type CashFlowPerShareProps = {
 	ratios: RechartsFreeCashFlowPerShare[]
@@ -18,7 +19,7 @@ const CashFlowPerShare = ({ ratios }: CashFlowPerShareProps) => {
 			>
 				{/* <CartesianGrid strokeDasharray="0"/> */}
 				<XAxis dataKey="year" />
-				<Tooltip />
+				<Tooltip content={<CustomTooltip />}/>
 				<Legend />
 				<Area dataKey="freeCashFlowPerShare" stroke="#ff5858" fill="#ff5858" name="Free cash flow per share" strokeWidth={3} dot={true}/>
 			</ComposedChart>

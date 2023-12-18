@@ -1,6 +1,7 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from 'recharts'; // Replace with the actual import path
 import { CashFlow } from '../../types/FinancialReport.type';
 import { parseAcquitions } from '../../utils/parser';
+import {  CustomTooltip } from '../../utils/recharts';
 
 type CashFlowGraphProps = {
   cashFlowData: CashFlow | null | undefined;
@@ -22,7 +23,7 @@ const Acquisitions = ({ cashFlowData }: CashFlowGraphProps) => {
         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
       >
 			<XAxis dataKey="year" />
-			<Tooltip />
+			<Tooltip content={<CustomTooltip />}/>
 			<Legend />
 			<Area
 			type="monotone"

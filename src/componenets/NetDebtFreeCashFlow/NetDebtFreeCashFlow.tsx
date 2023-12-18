@@ -1,5 +1,6 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from "recharts";
 import { RechartsNetDebtAndFreeCashFlow } from "../../utils/parser";
+import { CustomTooltip } from "../../utils/recharts";
 
 type NetDebtFreeCashFlowProps = {
 	data: RechartsNetDebtAndFreeCashFlow[]
@@ -18,7 +19,7 @@ const NetDebtFreeCashFlow = ({data}: NetDebtFreeCashFlowProps) => {
 			>
 				{/* <CartesianGrid strokeDasharray="0"/> */}
 				<XAxis dataKey="year" />
-				<Tooltip />
+				<Tooltip content={<CustomTooltip />}/>
 				<Legend />
 				<Area dataKey="freeCashFlow" stroke="#6358ff" fill="#6358ff" name="Free cash flow" strokeWidth={3} dot={true}/>
 				<Area dataKey="netDebt" stroke="#ff588d" fill="#ff588d" name="Net debt" strokeWidth={3} dot={true}/>

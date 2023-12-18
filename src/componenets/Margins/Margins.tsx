@@ -1,9 +1,10 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, ComposedChart, Line } from 'recharts';
 import { Ratios } from '../../types/FinancialReport.type';
 import { parseMargins } from '../../utils/parser';
+import { CustomTooltip } from '../../utils/recharts';
 
 type ProfitMarginsProps = {
-  ratios: Ratios[] | null | undefined;
+  ratios: Ratios | null | undefined;
 };
 
 const Margins = ({ ratios }: ProfitMarginsProps) => {
@@ -21,7 +22,7 @@ const Margins = ({ ratios }: ProfitMarginsProps) => {
         margin={{ top: 20, right: 30, left: 150, bottom: 5 }}
       >
         <XAxis dataKey="year" />
-        <Tooltip />
+        <Tooltip  content={<CustomTooltip />}/>
         <Legend />
         <Line
           type="monotone"

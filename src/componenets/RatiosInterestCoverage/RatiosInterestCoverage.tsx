@@ -8,9 +8,10 @@ import {
 } from 'recharts';
 import { Ratios } from '../../types/FinancialReport.type';
 import { parseRatiosForChart } from '../../utils/parser';
+import { CustomTooltip } from '../../utils/recharts';
 
 interface RationInterestCoverageProps {
-  ratiosData: Ratios[] | null | undefined
+  ratiosData: Ratios | null | undefined
 }
 
 const RationInterestCoverage = ({ ratiosData }: RationInterestCoverageProps) => {
@@ -25,7 +26,7 @@ const RationInterestCoverage = ({ ratiosData }: RationInterestCoverageProps) => 
 		<ResponsiveContainer width="100%" height={400}>
 		<ComposedChart data={data}>
 			<XAxis dataKey="year" />
-			<Tooltip />
+			<Tooltip content={<CustomTooltip />}/>
 			<Legend />
 			<Line dataKey="quickRatio" stroke="#8884d8" name="Quick Ratio" />
 			<Line dataKey="currentRatio" stroke="#82ca9d" name="Current Ratio" />

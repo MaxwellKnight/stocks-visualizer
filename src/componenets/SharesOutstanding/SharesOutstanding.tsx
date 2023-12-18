@@ -1,6 +1,7 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, ComposedChart, Area } from 'recharts';
 import { Income } from '../../types/FinancialReport.type';
 import { parseSharesOutstanding } from '../../utils/parser';
+import { CustomTooltip } from '../../utils/recharts';
 
 type SharesOutstandingProps = {
   incomeData: Income | null | undefined;
@@ -22,7 +23,7 @@ const SharesOutstanding = ({ incomeData }: SharesOutstandingProps) => {
         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
       >
         <XAxis dataKey="year" />
-        <Tooltip />
+        <Tooltip content={<CustomTooltip />}/>
         <Legend />
         <Area
 			type="monotone"
