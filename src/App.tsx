@@ -68,7 +68,7 @@ function App() {
           id="ticker"
           value={ticker}
           onChange={(e) => handleTickerChange(e)}
-          placeholder="AAPL"
+          placeholder={debouncedTicker}
         />
       </div>
       <div className="container shadow">
