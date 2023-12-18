@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Ratios } from '../../types/FinancialReport.type';
+import { Ratios } from '../../types';
 import { parseRatiosDataForGraph } from '../../utils/parser';
 import { CustomTooltip } from '../../utils/recharts';
 

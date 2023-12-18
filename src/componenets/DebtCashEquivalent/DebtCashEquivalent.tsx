@@ -1,5 +1,5 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from 'recharts';
-import { RechartsDebtCash } from '../../types/Recharts.type';
+import { RechartsDebtCash } from '../../types';
 import { CustomTooltip } from '../../utils/recharts';
 
 type TotalDebtAndCashGraphProps = {

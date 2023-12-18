@@ -1,6 +1,6 @@
-import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from "recharts"
-import { RechartsFreeCashFlowPerShare } from "../../types/Recharts.type"
-import { CustomTooltip } from "../../utils/recharts"
+import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from "recharts";
+import { RechartsFreeCashFlowPerShare } from "../../types";
+import { CustomTooltip } from "../../utils/recharts";
 
 type CashFlowPerShareProps = {
 	ratios: RechartsFreeCashFlowPerShare[]

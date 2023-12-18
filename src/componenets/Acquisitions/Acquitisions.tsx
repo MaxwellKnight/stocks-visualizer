@@ -1,5 +1,5 @@
-import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from 'recharts'; // Replace with the actual import path
-import { CashFlow } from '../../types/FinancialReport.type';
+import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from 'recharts'; 
+import { CashFlow } from '../../types/financialReport.type';
 import { parseAcquitions } from '../../utils/parser';
 import {  CustomTooltip } from '../../utils/recharts';
 

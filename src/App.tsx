@@ -1,24 +1,25 @@
-import RationInterestCoverage from './componenets/RatiosInterestCoverage/RatiosInterestCoverage';
-import TotalDebtAndCashGraph from './componenets/DebtCashEquivalent/DebtCashEquivalent';
-import NetDebtFreeCashFlow from './componenets/NetDebtFreeCashFlow/NetDebtFreeCashFlow';
-import { BalanceSheet, CashFlow, Income, Ratios } from './types/FinancialReport.type';
-import { RechartsAssetsLiabilities } from './types/Recharts.type';
-import SharesOutstanding from './componenets/SharesOutstanding/SharesOutstanding';
-import AssetsLiabilities from './componenets/AssetsLiabilities/AssetsLiabilities';
-import CashFlowPerShare from './componenets/CashFlowPerShare/CashFlowPerShare';
-import RevenueIncome from './componenets/RevenueIncome/RevenueIncome';
-import Acquisitions from './componenets/Acquisitions/Acquitisions';
-import Returns from './componenets/Returns/Returns';
-import Margins from './componenets/Margins/Margins';
-import useFetch from './hooks/useFetch/useFetch';
-import Cash from './componenets/Cash/Cash';
+import { BalanceSheet, Ratios, CashFlow, Income, RechartsAssetsLiabilities } from './types';
 import { useState, useEffect } from 'react';
+import { useFetch } from './hooks';
 import {
 	parseAssetsLiabilities,
 	parseFreeCashFlowPerShare,
 	parseNetDebtAndFreeCashFlow,
 	parseTotalDebtAndCash,
 } from './utils/parser';
+import { 
+	AssetsLiabilities, 
+	TotalDebtAndCashGraph, 
+	RationInterestCoverage, 
+	CashFlowPerShare, 
+	NetDebtFreeCashFlow, 
+	Returns, 
+	RevenueIncome, 
+	Margins, 
+	Cash, 
+	Acquisitions, 
+	SharesOutstanding 
+} from './componenets';
 import './App.css';
 
 function App() {

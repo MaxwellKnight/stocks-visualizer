@@ -1,6 +1,6 @@
-import { ComposedChart, XAxis, Tooltip, Legend, Bar, ResponsiveContainer, Area } from "recharts"
-import { RechartsAssetsLiabilities } from "../../types/Recharts.type"
-import { CustomTooltip } from "../../utils/recharts"
+import { ComposedChart, XAxis, Tooltip, Legend, Bar, ResponsiveContainer, Area } from "recharts";
+import { RechartsAssetsLiabilities } from "../../types";
+import { CustomTooltip } from "../../utils/recharts";
 
 type AssetsLiabilitiesProps = {
 	rechartsData: RechartsAssetsLiabilities[]

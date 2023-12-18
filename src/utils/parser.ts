@@ -1,5 +1,5 @@
-import { BalanceSheet, CashFlow, Income, Ratios } from "../types/FinancialReport.type";
-import { RechartsAssetsLiabilities, RechartsDebtCash, RechartsFreeCashFlowPerShare } from "../types/Recharts.type";
+import { BalanceSheet, RechartsAssetsLiabilities, RechartsDebtCash, Ratios, RechartsFreeCashFlowPerShare, CashFlow, Income } from "../types";
+
 
 export const parseAssetsLiabilities = (financialReport: BalanceSheet | null | undefined): RechartsAssetsLiabilities[] => {
   if (!financialReport) return [];

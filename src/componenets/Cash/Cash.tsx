@@ -1,5 +1,5 @@
 import { XAxis, Tooltip, Legend, ResponsiveContainer, Area, ComposedChart } from 'recharts';
-import { CashFlow } from '../../types/FinancialReport.type';
+import { CashFlow } from '../../types/financialReport.type';
 import { parseCash } from '../../utils/parser';
 import { CustomTooltip } from '../../utils/recharts';
 

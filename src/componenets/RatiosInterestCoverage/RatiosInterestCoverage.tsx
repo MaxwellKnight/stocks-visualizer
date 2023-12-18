@@ -6,7 +6,7 @@ import {
 	ResponsiveContainer,
 	ComposedChart,
 } from 'recharts';
-import { Ratios } from '../../types/FinancialReport.type';
+import { Ratios } from '../../types';
 import { parseRatiosForChart } from '../../utils/parser';
 import { CustomTooltip } from '../../utils/recharts';
 
