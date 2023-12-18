@@ -7,8 +7,8 @@ export const CustomTooltip = ({ active, payload } : CustomTooltip) => {
 	if (active && payload) {
 		return (
 			<div className="custom-tooltip">
-				{payload.map((element) => 
-					<p>
+				{payload.map((element, index) => 
+					<p key={index}>
 						<span style={{color:`${element.color}`}}>{element.name}</span>:<span>{formatNumber(Number(element.value))}</span>
 					</p>
 				)}

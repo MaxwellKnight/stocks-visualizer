@@ -7,10 +7,9 @@ const useFetch = <T,>(url: string, deps: unknown[] = [], options?: RequestInit) 
 	const [{ data, loading, error}, dispatch] = useReducer(fetchReducer<T>, initial_fetch);
 	const cache = useRef<Cache<T>>({});
 	const cancelRequest = useRef<boolean>(false);
-	console.log(cache);
 
 	useEffect(() => {
-		const fetchData = async () => {
+		const getUrl = async () => {
 			dispatch({type: 'FETCH_START'});
 			if(cache.current[url]){
 				dispatch({type: 'FETCH_SUCCESS', data: cache.current[url]});
@@ -28,7 +27,7 @@ const useFetch = <T,>(url: string, deps: unknown[] = [], options?: RequestInit) 
 				dispatch({type: 'FETCH_FAILURE', error: error as Error})
 			}
 		}
-		fetchData();
+		getUrl();
 
 		return () => {
 			cancelRequest.current = true;
